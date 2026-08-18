@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Isabel Antunes | Pessoas, Gestão e Desenvolvimento</title>
+<meta name="description" content="Portfolio profissional de Isabel Antunes — experiência em Psicologia, intervenção social, formação, coordenação, gestão e desenvolvimento de pessoas e organizações.">
+<meta name="keywords" content="Isabel Antunes, Psicologia, Gestão, Coordenação, Formação, Intervenção Social, Recursos Humanos, Covilhã, Castelo Branco">
+
+<meta property="og:title" content="Isabel Antunes | Pessoas, Gestão e Desenvolvimento">
+<meta property="og:description" content="Experiência que liga pessoas, organizações e resultados.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/isabel-antunes.jpg">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2246%22 fill=%22%230B2A33%22/><text x=%2250%22 y=%2265%22 font-size=%2255%22 fill=%22%23C9A96A%22 text-anchor=%22middle%22 font-family=%22Georgia,serif%22>I</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  /* ============ TOKENS ============ */
+  :root{
+    --azul-marinho: #0B2A33;
+    --azul-petroleo: #133C46;
+    --azul-petroleo-2: #1B4F5C;
+    --off-white: #FAF8F4;
+    --cinza-claro: #F1EFEA;
+    --cinza-medio: #C7C2B8;
+    --dourado: #C9A96A;
+    --dourado-claro: #E4D4AC;
+    --texto-escuro: #1B2429;
+    --texto-medio: #4A5A61;
+    --serif: 'Playfair Display', Georgia, serif;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --container: 1180px;
+    --transition: 0.5s cubic-bezier(.22,1,.36,1);
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:var(--sans);
+    color:var(--texto-escuro);
+    background:var(--off-white);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  ul{list-style:none;}
+  section{position:relative;}
+  .container{max-width:var(--container);margin:0 auto;padding:0 32px;}
+
+  h1,h2,h3,h4{font-family:var(--serif);font-weight:600;line-height:1.15;color:var(--azul-marinho);}
+
+  .eyebrow{
+    font-size:12px;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    font-weight:600;
+    color:var(--dourado);
+  }
+
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:15px 30px;
+    font-family:var(--sans);
+    font-size:13px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    font-weight:600;
+    border-radius:2px;
+    cursor:pointer;
+    border:1px solid transparent;
+    transition:all .35s ease;
+    white-space:nowrap;
+  }
+  .btn-primary{background:var(--azul-marinho);color:var(--off-white);}
+  .btn-primary:hover{background:var(--azul-petroleo-2);transform:translateY(-2px);}
+  .btn-outline{border-color:var(--azul-marinho);color:var(--azul-marinho);background:transparent;}
+  .btn-outline:hover{background:var(--azul-marinho);color:var(--off-white);transform:translateY(-2px);}
+  .btn-gold{border-color:var(--dourado);color:var(--dourado-claro);background:transparent;}
+  .btn-gold:hover{background:var(--dourado);color:var(--azul-marinho);}
+  .btn:focus-visible, a:focus-visible, button:focus-visible{outline:2px solid var(--dourado);outline-offset:3px;}
+
+  /* ============ NAV ============ */
+  header{
+    position:fixed;top:0;left:0;right:0;
+    z-index:1000;
+    padding:26px 0;
+    transition:all .4s ease;
+  }
+  header.scrolled{
+    padding:14px 0;
+    background:rgba(250,248,244,0.92);
+    backdrop-filter:blur(10px);
+    box-shadow:0 1px 24px rgba(11,42,51,0.08);
+  }
+  .nav-wrap{
+    display:flex;align-items:center;justify-content:space-between;
+  }
+  .logo{
+    font-family:var(--serif);
+    font-size:20px;
+    font-weight:600;
+    color:var(--azul-marinho);
+    letter-spacing:0.02em;
+  }
+  .logo span{color:var(--dourado);}
+  nav ul{display:flex;gap:38px;}
+  nav a{
+    font-size:13px;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    font-weight:500;
+    color:var(--texto-medio);
+    position:relative;
+    padding-bottom:4px;
+  }
+  nav a::after{
+    content:'';position:absolute;bottom:0;left:0;width:0;height:1px;
+    background:var(--dourado);transition:width .3s ease;
+  }
+  nav a:hover{color:var(--azul-marinho);}
+  nav a:hover::after{width:100%;}
+  .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:6px;z-index:1100;}
+  .nav-toggle span{display:block;width:26px;height:2px;background:var(--azul-marinho);margin:6px 0;transition:all .3s ease;}
+  .nav-toggle.open span:nth-child(1){transform:translateY(8px) rotate(45deg);}
+  .nav-toggle.open span:nth-child(2){opacity:0;}
+  .nav-toggle.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg);}
+
+  /* ============ HERO ============ */
+  .hero{
+    min-height:100vh;
+    display:flex;align-items:center;
+    padding:140px 0 80px;
+    background:
+      radial-gradient(1100px 600px at 82% 10%, rgba(201,169,106,0.08), transparent 60%),
+      linear-gradient(180deg, var(--off-white) 0%, var(--cinza-claro) 100%);
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.05fr 0.95fr;
+    gap:60px;
+    align-items:center;
+  }
+  .hero-text .eyebrow{margin-bottom:22px;display:block;}
+  .hero-text h1{
+    font-size:clamp(38px, 4.4vw, 60px);
+    margin-bottom:10px;
+  }
+  .hero-title{
+    font-family:var(--sans);
+    font-size:15px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    font-weight:600;
+    color:var(--texto-medio);
+    margin-bottom:28px;
+  }
+  .hero-headline{
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:clamp(20px,2vw,26px);
+    color:var(--azul-petroleo-2);
+    font-weight:400;
+    max-width:520px;
+    margin-bottom:24px;
+    line-height:1.4;
+  }
+  .hero-text p.lead{
+    font-size:16px;
+    color:var(--texto-medio);
+    max-width:480px;
+    margin-bottom:36px;
+  }
+  .hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:38px;}
+  .hero-tagline{
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:15px;
+    color:var(--azul-petroleo);
+    border-left:2px solid var(--dourado);
+    padding-left:16px;
+    max-width:440px;
+  }
+
+  .hero-photo-wrap{
+    position:relative;
+    display:flex;
+    justify-content:center;
+  }
+  .hero-photo-blob{
+    position:absolute;
+    width:112%;
+    height:112%;
+    top:-6%;
+    left:-6%;
+    z-index:1;
+  }
+  .hero-photo{
+    position:relative;
+    z-index:2;
+    width:min(380px, 82%);
+    aspect-ratio:3/4;
+    border-radius:6px;
+    overflow:hidden;
+    box-shadow:0 30px 60px -20px rgba(11,42,51,0.35), 0 4px 14px rgba(11,42,51,0.1);
+    border:1px solid rgba(255,255,255,0.6);
+  }
+  .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center 18%;}
+  .hero-photo-frame{
+    position:absolute;
+    z-index:0;
+    width:min(380px, 82%);
+    aspect-ratio:3/4;
+    top:22px;left:calc(50% + 22px);
+    transform:translateX(-50%);
+    border:1px solid var(--dourado);
+    border-radius:6px;
+    opacity:0.55;
+  }
+
+  /* ============ GENERIC SECTION HEADS ============ */
+  .section{padding:120px 0;}
+  .section-tight{padding:90px 0;}
+  .section-head{max-width:640px;margin-bottom:64px;}
+  .section-head .eyebrow{margin-bottom:14px;display:block;}
+  .section-head h2{font-size:clamp(28px,3vw,40px);}
+  .section-head p{color:var(--texto-medio);margin-top:16px;font-size:16px;max-width:560px;}
+
+  .fade-up{opacity:0;transform:translateY(28px);transition:opacity .8s ease, transform .8s ease;}
+  .fade-up.visible{opacity:1;transform:translateY(0);}
+
+  /* ============ SOBRE ============ */
+  .sobre{background:var(--off-white);}
+  .sobre-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:70px;align-items:start;}
+  .sobre-quote{
+    font-family:var(--serif);
+    font-size:clamp(22px,2.4vw,30px);
+    line-height:1.45;
+    color:var(--azul-marinho);
+    font-weight:500;
+  }
+  .sobre-quote::before{content:'“';color:var(--dourado);font-size:1.2em;}
+  .sobre-body p{color:var(--texto-medio);margin-bottom:20px;font-size:16px;}
+  .sobre-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px;}
+  .sobre-tags span{
+    font-size:12px;letter-spacing:0.06em;text-transform:uppercase;
+    padding:8px 16px;border:1px solid var(--cinza-medio);border-radius:30px;
+    color:var(--texto-medio);
+  }
+
+  /* ============ PERCURSO / TIMELINE ============ */
+  .percurso{background:var(--cinza-claro);}
+  .skill-flow{
+    display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:70px;
+    font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--azul-petroleo-2);font-weight:600;
+  }
+  .skill-flow .arrow{color:var(--dourado);}
+
+  .timeline{position:relative;}
+  .timeline-track{
+    display:flex;
+    gap:0;
+    overflow-x:auto;
+    padding-bottom:30px;
+    scroll-snap-type:x proximity;
+  }
+  .timeline-line{
+    position:relative;
+    height:2px;
+    background:linear-gradient(90deg, var(--dourado), var(--cinza-medio));
+    margin-bottom:0;
+  }
+  .timeline-item{
+    flex:0 0 300px;
+    scroll-snap-align:start;
+    padding:0 26px 0 0;
+    position:relative;
+  }
+  .timeline-item .dot{
+    width:11px;height:11px;border-radius:50%;
+    background:var(--off-white);border:2px solid var(--dourado);
+    margin-bottom:22px;
+  }
+  .timeline-item h3{font-size:18px;margin-bottom:4px;}
+  .timeline-item .place{font-size:13px;color:var(--texto-medio);margin-bottom:10px;font-weight:500;}
+  .timeline-item .tag{
+    display:inline-block;font-size:11px;letter-spacing:0.05em;text-transform:uppercase;
+    color:var(--dourado);font-weight:700;margin-bottom:8px;
+  }
+
+  /* ============ PERSPETIVAS (signature element) ============ */
+  .perspetivas{background:var(--azul-marinho);color:var(--off-white);overflow:hidden;}
+  .perspetivas .eyebrow{color:var(--dourado-claro);}
+  .perspetivas .section-head h2{color:var(--off-white);}
+  .perspetivas .section-head p{color:rgba(250,248,244,0.7);}
+
+  .persp-diagram{
+    position:relative;
+    max-width:620px;
+    margin:0 auto;
+    aspect-ratio:1/1;
+  }
+  .persp-svg{position:absolute;inset:0;width:100%;height:100%;}
+  .persp-center{
+    position:absolute;
+    top:50%;left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    z-index:3;
+  }
+  .persp-center .name{font-family:var(--serif);font-size:22px;color:var(--off-white);letter-spacing:0.02em;}
+  .persp-center .sub{font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--dourado-claro);margin-top:4px;}
+
+  .persp-node{
+    position:absolute;
+    width:170px;
+    text-align:center;
+    z-index:2;
+  }
+  .persp-node .icon-circle{
+    width:64px;height:64px;border-radius:50%;
+    background:var(--azul-petroleo);
+    border:1px solid rgba(201,169,106,0.4);
+    display:flex;align-items:center;justify-content:center;
+    margin:0 auto 14px;
+    transition:all .4s ease;
+  }
+  .persp-node:hover .icon-circle{background:var(--dourado);border-color:var(--dourado);}
+  .persp-node:hover .icon-circle svg{stroke:var(--azul-marinho);}
+  .persp-node .icon-circle svg{width:26px;height:26px;stroke:var(--dourado-claro);transition:stroke .4s ease;}
+  .persp-node h4{color:var(--off-white);font-size:16px;margin-bottom:6px;letter-spacing:0.03em;}
+  .persp-node p{font-size:12.5px;color:rgba(250,248,244,0.62);line-height:1.5;}
+
+  .persp-node.n1{top:0%;left:50%;transform:translateX(-50%);}
+  .persp-node.n2{top:50%;right:-2%;transform:translateY(-50%);}
+  .persp-node.n3{bottom:0%;left:50%;transform:translateX(-50%);}
+  .persp-node.n4{top:50%;left:-2%;transform:translateY(-50%);}
+
+  /* ============ COMPETENCIAS ============ */
+  .competencias{background:var(--off-white);}
+  .comp-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:2px;
+    background:var(--cinza-medio);
+    border:1px solid var(--cinza-medio);
+  }
+  .comp-card{
+    background:var(--off-white);
+    padding:44px 34px;
+    transition:background .35s ease;
+  }
+  .comp-card:hover{background:var(--cinza-claro);}
+  .comp-card .num{font-family:var(--serif);font-size:13px;color:var(--dourado);letter-spacing:0.1em;margin-bottom:20px;display:block;}
+  .comp-card h3{font-size:19px;margin-bottom:10px;}
+  .comp-card p{font-size:14px;color:var(--texto-medio);}
+
+  /* ============ FORMACAO ============ */
+  .formacao{background:var(--cinza-claro);}
+  .form-list{border-top:1px solid var(--cinza-medio);}
+  .form-item{
+    display:grid;
+    grid-template-columns:120px 1fr auto;
+    gap:24px;
+    align-items:center;
+    padding:26px 0;
+    border-bottom:1px solid var(--cinza-medio);
+  }
+  .form-item .yr{font-family:var(--serif);font-style:italic;color:var(--dourado);font-size:14px;}
+  .form-item h3{font-size:17px;margin-bottom:3px;}
+  .form-item .inst{font-size:13.5px;color:var(--texto-medio);}
+  .form-item .status{
+    font-size:11px;letter-spacing:0.06em;text-transform:uppercase;font-weight:600;
+    color:var(--azul-petroleo-2);border:1px solid var(--azul-petroleo-2);padding:6px 12px;border-radius:20px;
+    white-space:nowrap;
+  }
+  .form-closing{
+    margin-top:56px;text-align:center;
+  }
+  .form-closing h3{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(18px,2vw,22px);color:var(--azul-petroleo);max-width:520px;margin:0 auto;}
+  .form-closing .eyebrow{display:block;margin-bottom:14px;}
+
+  /* ============ DIFERENCIAL ============ */
+  .diferencial{background:var(--azul-petroleo);color:var(--off-white);text-align:center;}
+  .diferencial .eyebrow{color:var(--dourado-claro);}
+  .diferencial h2{color:var(--off-white);font-size:clamp(28px,3.2vw,42px);margin-bottom:50px;}
+  .dif-chips{
+    display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-bottom:50px;
+  }
+  .dif-chips span{
+    font-family:var(--serif);
+    font-size:15px;
+    padding:12px 26px;
+    border:1px solid rgba(228,212,172,0.4);
+    border-radius:30px;
+    color:var(--dourado-claro);
+  }
+  .dif-result{
+    font-family:var(--serif);
+    font-size:clamp(22px,2.6vw,30px);
+    color:var(--off-white);
+    margin-bottom:16px;
+  }
+  .dif-result span{color:var(--dourado);}
+  .diferencial .desc{max-width:600px;margin:0 auto;color:rgba(250,248,244,0.7);font-size:15.5px;}
+
+  /* ============ VALOR (4 pilares) ============ */
+  .valor{background:var(--off-white);}
+  .valor-quote{
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:clamp(22px,2.6vw,32px);
+    color:var(--azul-marinho);
+    max-width:760px;
+    margin-bottom:70px;
+    line-height:1.4;
+  }
+  .pilares{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:36px;
+  }
+  .pilar .pnum{
+    font-family:var(--serif);
+    font-size:15px;
+    color:var(--dourado);
+    display:block;
+    margin-bottom:18px;
+    border-bottom:1px solid var(--cinza-medio);
+    padding-bottom:18px;
+  }
+  .pilar h3{font-size:16.5px;margin-bottom:10px;letter-spacing:0.01em;}
+  .pilar p{font-size:14px;color:var(--texto-medio);}
+
+  /* ============ PUBLICACAO ============ */
+  .publicacao{background:var(--cinza-claro);}
+  .pub-card{
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:30px;
+    align-items:center;
+    background:var(--off-white);
+    border:1px solid var(--cinza-medio);
+    border-radius:4px;
+    padding:44px 48px;
+  }
+  .pub-card .eyebrow{margin-bottom:14px;display:block;}
+  .pub-card h3{font-size:22px;margin-bottom:10px;font-style:italic;}
+  .pub-card p{color:var(--texto-medio);font-size:14.5px;max-width:520px;}
+
+  /* ============ IMPACTO ============ */
+  .impacto{
+    background:var(--azul-marinho);
+    color:var(--off-white);
+    padding:150px 0;
+    text-align:center;
+  }
+  .impacto h2{
+    font-family:var(--serif);
+    font-weight:500;
+    font-size:clamp(26px, 3.6vw, 44px);
+    color:var(--off-white);
+    line-height:1.4;
+    max-width:900px;
+    margin:0 auto 40px;
+  }
+  .impacto .subline{
+    font-size:13px;
+    letter-spacing:0.2em;
+    text-transform:uppercase;
+    color:var(--dourado-claro);
+    font-weight:600;
+  }
+
+  /* ============ CONTACTO ============ */
+  .contacto{background:var(--off-white);}
+  .contacto-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+  }
+  .contacto h2{font-size:clamp(28px,3.2vw,42px);margin-bottom:22px;}
+  .contacto .lead{color:var(--texto-medio);font-size:16px;max-width:440px;margin-bottom:40px;}
+  .contacto-actions{display:flex;gap:16px;flex-wrap:wrap;}
+  .contacto-info{
+    background:var(--cinza-claro);
+    padding:44px;
+    border-radius:4px;
+  }
+  .contacto-info .name{font-family:var(--serif);font-size:22px;color:var(--azul-marinho);margin-bottom:6px;}
+  .contacto-info .loc{color:var(--texto-medio);font-size:14px;margin-bottom:28px;}
+  .contact-line{
+    display:flex;align-items:center;gap:14px;
+    padding:16px 0;
+    border-top:1px solid var(--cinza-medio);
+    font-size:14.5px;
+  }
+  .contact-line:last-child{border-bottom:1px solid var(--cinza-medio);}
+  .contact-line svg{width:18px;height:18px;stroke:var(--dourado);flex-shrink:0;}
+  .contact-line a:hover{color:var(--azul-petroleo-2);}
+
+  /* ============ FOOTER ============ */
+  footer{
+    background:var(--azul-marinho);
+    color:rgba(250,248,244,0.6);
+    padding:50px 0 34px;
+    text-align:center;
+  }
+  footer .flogo{font-family:var(--serif);font-size:20px;color:var(--off-white);margin-bottom:6px;}
+  footer .ftitle{font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--dourado-claro);margin-bottom:14px;}
+  footer .ftag{font-family:var(--serif);font-style:italic;font-size:14px;margin-bottom:26px;color:rgba(250,248,244,0.7);}
+  footer .fcopy{font-size:12px;color:rgba(250,248,244,0.4);}
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width:980px){
+    .hero-grid{grid-template-columns:1fr;gap:50px;}
+    .hero{padding-top:120px;}
+    .hero-photo-wrap{order:-1;margin-bottom:10px;}
+    .sobre-grid{grid-template-columns:1fr;gap:40px;}
+    .comp-grid{grid-template-columns:repeat(2,1fr);}
+    .pilares{grid-template-columns:repeat(2,1fr);}
+    .contacto-grid{grid-template-columns:1fr;}
+    .pub-card{grid-template-columns:1fr;text-align:left;}
+    .persp-diagram{max-width:460px;}
+    .persp-node{width:130px;}
+  }
+
+  @media (max-width:720px){
+    .container{padding:0 22px;}
+    nav ul{
+      position:fixed;top:0;right:0;
+      height:100vh;width:min(78vw,320px);
+      background:var(--azul-marinho);
+      flex-direction:column;
+      justify-content:center;
+      gap:34px;
+      padding:0 40px;
+      transform:translateX(100%);
+      transition:transform .45s cubic-bezier(.22,1,.36,1);
+      z-index:1050;
+    }
+    nav ul.open{transform:translateX(0);}
+    nav ul a{color:var(--off-white);font-size:16px;}
+    nav ul a::after{background:var(--dourado);}
+    .nav-toggle{display:block;}
+    .nav-overlay{
+      position:fixed;inset:0;background:rgba(11,42,51,0.5);
+      opacity:0;pointer-events:none;transition:opacity .35s ease;z-index:1040;
+    }
+    .nav-overlay.open{opacity:1;pointer-events:auto;}
+
+    .section{padding:80px 0;}
+    .hero{padding-top:110px;padding-bottom:60px;}
+    .hero-actions{flex-direction:column;align-items:stretch;}
+    .hero-actions .btn{justify-content:center;}
+    .comp-grid{grid-template-columns:1fr;}
+    .pilares{grid-template-columns:1fr;}
+    .form-item{grid-template-columns:1fr;gap:8px;}
+    .form-item .status{justify-self:flex-start;}
+    .persp-diagram{max-width:320px;}
+    .persp-node{width:100px;}
+    .persp-node .icon-circle{width:48px;height:48px;margin-bottom:8px;}
+    .persp-node .icon-circle svg{width:20px;height:20px;}
+    .persp-node p{display:none;}
+    .persp-center .name{font-size:16px;}
+    .pub-card{padding:32px 26px;}
+    .contacto-info{padding:32px 26px;}
+    .impacto{padding:100px 0;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.01ms !important;transition-duration:0.01ms !important;scroll-behavior:auto !important;}
+  }
+</style>
+</head>
+<body>
+
+<a href="#main" class="sr-only" style="position:absolute;left:-9999px;">Saltar para o conteúdo principal</a>
+
+<!-- ============ HEADER ============ -->
+<header id="site-header">
+  <div class="container nav-wrap">
+    <a href="#inicio" class="logo">ISABEL <span>ANTUNES</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav>
+      <ul id="navList">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#percurso">Percurso</a></li>
+        <li><a href="#competencias">Competências</a></li>
+        <li><a href="#formacao">Formação</a></li>
+        <li><a href="#diferencial">Diferencial</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="inicio">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <span class="eyebrow">Portfólio Profissional</span>
+        <h1>Isabel Antunes</h1>
+        <div class="hero-title">Pessoas · Gestão · Desenvolvimento</div>
+        <p class="hero-headline">"Experiência que liga pessoas, organizações e resultados."</p>
+        <p class="lead">Um percurso construído entre Psicologia, pessoas, formação, coordenação, gestão e intervenção social.</p>
+        <div class="hero-actions">
+          <a href="#percurso" class="btn btn-primary">Conheça o meu percurso</a>
+          <a href="assets/CV-Isabel-Antunes.pdf" class="btn btn-outline" download>Descarregar CV</a>
+        </div>
+        <p class="hero-tagline">Experiência para compreender. Conhecimento para transformar. Pessoas para valorizar.</p>
+      </div>
+      <div class="hero-photo-wrap">
+        <div class="hero-photo-frame" aria-hidden="true"></div>
+        <svg class="hero-photo-blob" viewBox="0 0 400 460" aria-hidden="true">
+          <path fill="#133C46" fill-opacity="0.06" d="M198 8c60 0 121 30 150 84 27 51 22 118-11 165-34 49-95 74-155 78-61 4-127-13-160-62-32-48-27-121 5-172C60 47 130 8 198 8Z"/>
+        </svg>
+        <div class="hero-photo">
+          <img src="assets/isabel-antunes.jpg" alt="Isabel Antunes — fotografia profissional">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SOBRE ============ -->
+  <section class="section sobre" id="sobre">
+    <div class="container">
+      <div class="sobre-grid">
+        <div>
+          <span class="eyebrow">Sobre mim</span>
+          <h2 style="margin-top:14px;">Muito mais do que<br>um percurso profissional.</h2>
+        </div>
+        <div class="sobre-body fade-up">
+          <p class="sobre-quote">O meu percurso ensinou-me a olhar para uma organização a partir de diferentes perspetivas: a das pessoas, a das equipas, a dos processos e a dos resultados.</p>
+          <p>Psicóloga de formação, o meu caminho profissional levou-me por áreas que, à primeira vista, parecem distintas — intervenção social, formação de adultos, coordenação de equipas, gestão comercial e imobiliária. Na prática, cada uma destas experiências acrescentou uma camada de compreensão sobre como as pessoas trabalham, decidem, comunicam e crescem dentro de uma organização.</p>
+          <p>Esta diversidade não é dispersão. É a construção deliberada de uma visão que une o humano ao organizacional — e que me permite entrar numa equipa, entender rapidamente o seu funcionamento, e contribuir com clareza, responsabilidade e sentido prático.</p>
+          <div class="sobre-tags">
+            <span>Escuta ativa</span>
+            <span>Visão organizacional</span>
+            <span>Adaptação</span>
+            <span>Formação de pessoas</span>
+            <span>Coordenação de equipas</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PERCURSO ============ -->
+  <section class="section percurso" id="percurso">
+    <div class="container">
+      <div class="section-head fade-up">
+        <span class="eyebrow">O meu percurso</span>
+        <h2>Uma trajetória com direção,<br>não apenas com paragens.</h2>
+        <p>Cada função foi um passo na construção de um conjunto de competências que se reforçam mutuamente.</p>
+      </div>
+
+      <div class="skill-flow fade-up">
+        <span>Criatividade</span><span class="arrow">→</span>
+        <span>Comunicação</span><span class="arrow">→</span>
+        <span>Comercial</span><span class="arrow">→</span>
+        <span>Coordenação</span><span class="arrow">→</span>
+        <span>Formação</span><span class="arrow">→</span>
+        <span>Psicologia</span><span class="arrow">→</span>
+        <span>Intervenção Social</span><span class="arrow">→</span>
+        <span>Gestão</span>
+      </div>
+
+      <div class="timeline fade-up">
+        <div class="timeline-line"></div>
+        <div class="timeline-track">
+
+          <div class="timeline-item">
+            <div class="dot"></div>
+            <span class="tag">Criatividade</span>
+            <h3>Designer Têxtil</h3>
+            <p class="place">Mouras dos Pereirinhas</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="dot"></div>
+            <span class="tag">Comercial</span>
+            <h3>Experiência Comercial</h3>
+            <p class="place">City Bank / Loja Scala / Imobiliário</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="dot"></div>
+            <span class="tag">Coordenação</span>
+            <h3>Coordenadora Imobiliária</h3>
+            <p class="place">RE/MAX Covilhã</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="dot"></div>
+            <span class="tag">Serviços</span>
+            <h3>Auxiliar de Serviços Gerais</h3>
+            <p class="place">Centro Cultural e Social de Casegas</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="dot"></div>
+            <span class="tag">Formação</span>
+            <h3>Formação em PME's e Coordenadora Externa</h3>
+            <p class="place">AECBP / CFG</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="dot"></div>
+            <span class="tag">Gestão</span>
+            <h3>Diretora de Serviços</h3>
+            <p class="place">CFG — Centro de Formação e Gestão da Guarda</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="dot"></div>
+            <span class="tag">Psicologia</span>
+            <h3>Terapeuta / Psicóloga</h3>
+            <p class="place">Clínica e Unidade Terapêutica Casas de Santiago — Belmonte</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="dot"></div>
+            <span class="tag">Intervenção Social</span>
+            <h3>Psicóloga</h3>
+            <p class="place">Residência Sénior Don António — Peraboa</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PERSPETIVAS (signature diagram) ============ -->
+  <section class="section perspetivas">
+    <div class="container">
+      <div class="section-head fade-up">
+        <span class="eyebrow">Uma carreira com diferentes perspetivas</span>
+        <h2>Quatro dimensões.<br>Uma só visão.</h2>
+        <p>Estas áreas não funcionam isoladas — complementam-se e reforçam-se mutuamente em cada contexto profissional.</p>
+      </div>
+
+      <div class="persp-diagram fade-up">
+        <svg class="persp-svg" viewBox="0 0 400 400" aria-hidden="true">
+          <line id="lineA" x1="200" y1="200" x2="200" y2="55" stroke="#C9A96A" stroke-width="1" stroke-opacity="0.35" stroke-dasharray="4 6"/>
+          <line id="lineB" x1="200" y1="200" x2="345" y2="200" stroke="#C9A96A" stroke-width="1" stroke-opacity="0.35" stroke-dasharray="4 6"/>
+          <line id="lineC" x1="200" y1="200" x2="200" y2="345" stroke="#C9A96A" stroke-width="1" stroke-opacity="0.35" stroke-dasharray="4 6"/>
+          <line id="lineD" x1="200" y1="200" x2="55" y2="200" stroke="#C9A96A" stroke-width="1" stroke-opacity="0.35" stroke-dasharray="4 6"/>
+          <circle cx="200" cy="200" r="3" fill="#C9A96A"/>
+        </svg>
+
+        <div class="persp-center">
+          <div class="name">Isabel<br>Antunes</div>
+        </div>
+
+        <div class="persp-node n1">
+          <div class="icon-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12c2.5 0 4.5-2 4.5-4.5S14.5 3 12 3 7.5 5 7.5 7.5 9.5 12 12 12Z"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+          </div>
+          <h4>Pessoas</h4>
+          <p>Psicologia, intervenção, acompanhamento, empatia e comunicação.</p>
+        </div>
+
+        <div class="persp-node n2">
+          <div class="icon-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="10" width="6" height="11"/><rect x="9" y="4" width="6" height="17"/><rect x="15" y="7" width="6" height="14"/></svg>
+          </div>
+          <h4>Organizações</h4>
+          <p>Coordenação, gestão, processos, planeamento e resultados.</p>
+        </div>
+
+        <div class="persp-node n3">
+          <div class="icon-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <h4>Formação</h4>
+          <p>Formação de adultos, desenvolvimento de competências e transmissão de conhecimento.</p>
+        </div>
+
+        <div class="persp-node n4">
+          <div class="icon-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/><circle cx="12" cy="12" r="5"/></svg>
+          </div>
+          <h4>Criatividade</h4>
+          <p>Design, comunicação visual, inovação e capacidade de pensar de forma diferente.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMPETENCIAS ============ -->
+  <section class="section competencias" id="competencias">
+    <div class="container">
+      <div class="section-head fade-up">
+        <span class="eyebrow">Competências</span>
+        <h2>Um conjunto de capacidades<br>que se apoiam entre si.</h2>
+      </div>
+
+      <div class="comp-grid fade-up">
+        <div class="comp-card">
+          <span class="num">01</span>
+          <h3>Pessoas</h3>
+          <p>Empatia, escuta, relacionamento interpessoal e intervenção psicossocial.</p>
+        </div>
+        <div class="comp-card">
+          <span class="num">02</span>
+          <h3>Gestão</h3>
+          <p>Planeamento, organização, gestão de tempo e acompanhamento de processos.</p>
+        </div>
+        <div class="comp-card">
+          <span class="num">03</span>
+          <h3>Liderança</h3>
+          <p>Coordenação de equipas, liderança, gestão de conflitos e trabalho em equipa.</p>
+        </div>
+        <div class="comp-card">
+          <span class="num">04</span>
+          <h3>Comunicação</h3>
+          <p>Comunicação clara, adaptação da mensagem e relacionamento profissional.</p>
+        </div>
+        <div class="comp-card">
+          <span class="num">05</span>
+          <h3>Análise</h3>
+          <p>Análise crítica, resolução de problemas e integração de informação.</p>
+        </div>
+        <div class="comp-card">
+          <span class="num">06</span>
+          <h3>Tecnologia</h3>
+          <p>Microsoft Office, ferramentas digitais, design gráfico e Inteligência Artificial.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FORMACAO ============ -->
+  <section class="section formacao" id="formacao">
+    <div class="container">
+      <div class="section-head fade-up">
+        <span class="eyebrow">Formação</span>
+        <h2>Aprendizagem contínua.</h2>
+      </div>
+
+      <div class="form-list fade-up">
+        <div class="form-item">
+          <span class="yr">Licenciatura</span>
+          <div>
+            <h3>Licenciatura em Psicologia</h3>
+            <p class="inst">Universidade da Beira Interior</p>
+          </div>
+        </div>
+        <div class="form-item">
+          <span class="yr">1.º ano</span>
+          <div>
+            <h3>Mestrado em Psicologia Clínica e da Saúde</h3>
+            <p class="inst">Universidade da Beira Interior</p>
+          </div>
+        </div>
+        <div class="form-item">
+          <span class="yr">1.º ano</span>
+          <div>
+            <h3>Mestrado em Gerontologia Social</h3>
+            <p class="inst">Universidade da Beira Interior</p>
+          </div>
+        </div>
+        <div class="form-item">
+          <span class="yr">Em curso</span>
+          <div>
+            <h3>Técnico de Apoio à Gestão</h3>
+            <p class="inst">Formação profissional</p>
+          </div>
+          <span class="status">Em curso</span>
+        </div>
+        <div class="form-item">
+          <span class="yr">Concluído</span>
+          <div>
+            <h3>Técnico Psicossocial</h3>
+            <p class="inst">Formação profissional</p>
+          </div>
+        </div>
+        <div class="form-item">
+          <span class="yr">Concluído</span>
+          <div>
+            <h3>Formação de Formadores</h3>
+            <p class="inst">Certificação profissional</p>
+          </div>
+        </div>
+        <div class="form-item">
+          <span class="yr">Concluído</span>
+          <div>
+            <h3>Coaching, Liderança e Comunicação</h3>
+            <p class="inst">Formação complementar</p>
+          </div>
+        </div>
+        <div class="form-item">
+          <span class="yr">Concluído</span>
+          <div>
+            <h3>Designer Têxtil</h3>
+            <p class="inst">Formação técnica</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-closing fade-up">
+        <span class="eyebrow">Aprendizagem contínua</span>
+        <h3>"A experiência dá-nos raízes. A aprendizagem permite-nos continuar a crescer."</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DIFERENCIAL ============ -->
+  <section class="section diferencial" id="diferencial">
+    <div class="container">
+      <span class="eyebrow">O meu diferencial?</span>
+      <h2 style="margin-top:14px;">O que torna este percurso único.</h2>
+
+      <div class="dif-chips fade-up">
+        <span>Psicologia</span>
+        <span>Pessoas</span>
+        <span>Gestão</span>
+        <span>Comunicação</span>
+        <span>Experiência</span>
+        <span>Aprendizagem Contínua</span>
+      </div>
+
+      <p class="dif-result fade-up">Resultado: <span>Uma visão humana e organizacional.</span></p>
+      <p class="desc fade-up">Esta combinação permite compreender não apenas tarefas e processos, mas também as pessoas que fazem as organizações funcionar.</p>
+    </div>
+  </section>
+
+  <!-- ============ VALOR ============ -->
+  <section class="section valor">
+    <div class="container">
+      <div class="section-head fade-up">
+        <span class="eyebrow">O que posso trazer à sua organização?</span>
+      </div>
+      <p class="valor-quote fade-up">"Mais do que procurar uma função, procuro uma oportunidade para acrescentar valor."</p>
+
+      <div class="pilares fade-up">
+        <div class="pilar">
+          <span class="pnum">01</span>
+          <h3>Visão Humana</h3>
+          <p>Compreender pessoas, necessidades, relações e diferentes contextos.</p>
+        </div>
+        <div class="pilar">
+          <span class="pnum">02</span>
+          <h3>Visão Organizacional</h3>
+          <p>Compreender processos, objetivos, equipas e funcionamento das organizações.</p>
+        </div>
+        <div class="pilar">
+          <span class="pnum">03</span>
+          <h3>Adaptação</h3>
+          <p>Um percurso diversificado demonstra capacidade para aprender, mudar e assumir novos desafios.</p>
+        </div>
+        <div class="pilar">
+          <span class="pnum">04</span>
+          <h3>Resultados</h3>
+          <p>Transformar conhecimento, experiência e capacidade de análise em ação concreta.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PUBLICACAO ============ -->
+  <section class="section-tight publicacao">
+    <div class="container">
+      <div class="pub-card fade-up">
+        <div>
+          <span class="eyebrow">Conhecimento que também se partilha</span>
+          <h3>"Eu uso, logo tenho saúde" — Avaliação da acessibilidade do SNS 24 junto dos idosos</h3>
+          <p>Publicação científica sobre acessibilidade digital em saúde para a população sénior.</p>
+        </div>
+        <a href="https://doi.org/10.23919/CISTI54924.2022.9820050" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Ver publicação</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ IMPACTO ============ -->
+  <section class="impacto">
+    <div class="container fade-up">
+      <h2>Há percursos que não cabem numa única profissão.<br>Porque algumas experiências nos ensinam a compreender o mundo de vários ângulos.</h2>
+      <div class="subline">Pessoas · Organizações · Conhecimento · Experiência</div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACTO ============ -->
+  <section class="section contacto" id="contacto">
+    <div class="container contacto-grid">
+      <div class="fade-up">
+        <span class="eyebrow">Contacto</span>
+        <h2 style="margin-top:14px;">Vamos conversar?</h2>
+        <p class="lead">Se procura alguém que compreenda pessoas, organizações e desafios, talvez devêssemos conversar.</p>
+        <div class="contacto-actions">
+          <a href="mailto:isacov2005@hotmail.com" class="btn btn-primary">Contactar</a>
+          <a href="assets/CV-Isabel-Antunes.pdf" class="btn btn-outline" download>Descarregar CV</a>
+          <a href="#" id="linkedinBtn" target="_blank" rel="noopener noreferrer" class="btn btn-outline">LinkedIn</a>
+        </div>
+      </div>
+
+      <div class="contacto-info fade-up">
+        <div class="name">Isabel Antunes</div>
+        <div class="loc">Castelo Branco · Portugal</div>
+
+        <div class="contact-line">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16v16H4z" stroke="none"/><path d="M22 6 12 13 2 6"/><path d="M2 6h20v12H2z"/></svg>
+          <a href="mailto:isacov2005@hotmail.com">isacov2005@hotmail.com</a>
+        </div>
+        <div class="contact-line">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 3a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.2-1.3a2 2 0 0 1 2.1-.5c1 .3 2 .5 3 .7a2 2 0 0 1 1.7 2Z"/></svg>
+          <a href="tel:+351966141430">966 141 430</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="flogo">Isabel Antunes</div>
+    <div class="ftitle">Pessoas · Gestão · Desenvolvimento</div>
+    <div class="ftag">"Experiência que liga pessoas, organizações e resultados."</div>
+    <div class="fcopy">© 2026 Isabel Antunes</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // ---- Header scroll state ----
+  const header = document.getElementById('site-header');
+  const onScroll = () => {
+    if(window.scrollY > 40){ header.classList.add('scrolled'); }
+    else{ header.classList.remove('scrolled'); }
+  };
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  // ---- Mobile nav toggle ----
+  const toggle = document.getElementById('navToggle');
+  const navList = document.getElementById('navList');
+  const overlay = document.getElementById('navOverlay');
+
+  function closeNav(){
+    toggle.classList.remove('open');
+    navList.classList.remove('open');
+    overlay.classList.remove('open');
+    toggle.setAttribute('aria-expanded','false');
+  }
+  function toggleNav(){
+    const isOpen = navList.classList.toggle('open');
+    toggle.classList.toggle('open', isOpen);
+    overlay.classList.toggle('open', isOpen);
+    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  }
+  toggle.addEventListener('click', toggleNav);
+  overlay.addEventListener('click', closeNav);
+  navList.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
+
+  // ---- Scroll reveal ----
+  const revealEls = document.querySelectorAll('.fade-up');
+  if('IntersectionObserver' in window){
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold: 0.12, rootMargin: '0px 0px -60px 0px'});
+    revealEls.forEach(el => io.observe(el));
+  } else {
+    revealEls.forEach(el => el.classList.add('visible'));
+  }
+
+  // ---- Perspetivas diagram: draw-in lines on view ----
+  const perspSection = document.querySelector('.persp-diagram');
+  if(perspSection && 'IntersectionObserver' in window){
+    const lines = perspSection.querySelectorAll('line');
+    const io2 = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          lines.forEach((line, i) => {
+            line.style.transition = 'stroke-opacity .6s ease';
+            line.style.transitionDelay = (i * 0.12) + 's';
+            line.style.strokeOpacity = '0.6';
+          });
+          io2.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.3});
+    io2.observe(perspSection);
+  }
+
+  // ---- LinkedIn placeholder (edit URL below when available) ----
+  document.getElementById('linkedinBtn').setAttribute('href', 'https://www.linkedin.com/in/isabel-antunes');
+})();
+</script>
+
+</body>
+</html>
